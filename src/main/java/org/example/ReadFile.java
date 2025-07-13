@@ -1,7 +1,10 @@
 package org.example;
 
+import org.example.pojo.Person;
+
 import java.io.*;
-import java.util.Arrays;
+import java.sql.Array;
+import java.util.*;
 
 public class ReadFile {
 
@@ -19,7 +22,7 @@ public class ReadFile {
         return inputString;
     }
 
-    public static StringBuffer changeCharacter(StringBuffer stringBuffer){
+    public static StringBuffer changeCharacter(StringBuffer stringBuffer) {
 
         String vowels = "аеёиоуыэюяАЕЁИОУЫЭЮЯ";
         String noVowels = "бвгджзйклмнпрстфхцчшщБВГДЖЗЙКЛМНПРСТФХЦЧШЩ";
@@ -34,7 +37,7 @@ public class ReadFile {
         return stringBuffer;
     }
 
-    public static void countCharacter(StringBuffer stringBuffer){
+    public static void countCharacter(StringBuffer stringBuffer) {
 
         String vowels = "аеёиоуыэюяАЕЁИОУЫЭЮЯ";
         String noVowels = "бвгджзйклмнпрстфхцчшщБВГДЖЗЙКЛМНПРСТФХЦЧШЩ";
@@ -50,7 +53,34 @@ public class ReadFile {
         }
         System.out.println("Гласных " + a);
         System.out.println("Согласных " + b);
-        
 
+
+    }
+
+    public static Person setPerson(StringBuffer stringBuffer) {
+        Person person = new Person();
+        String string = stringBuffer.toString();
+        for (String part : string.split(",")) {
+            String[] keyValue = part.split("=");
+            if (keyValue.length >= 2) {
+                String key = keyValue[0].trim();
+                String value = keyValue[1].trim();
+
+                switch (key) {
+                    case "name":
+                        person.setName(value);
+                        break;
+                    case "surname":
+                        person.setSurname(value);
+                        break;
+                    case "age":
+                        person.setAge(Integer.parseInt(value));
+                        break;
+                }
+
+
+            }
+        }
+        return person;
     }
 }

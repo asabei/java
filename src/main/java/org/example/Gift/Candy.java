@@ -4,13 +4,13 @@ public abstract class Candy {
     String name;
     double weight;
     double price;
-    String param;
 
-    public Candy(String name, int weight, double price, String param) {
+
+    public Candy(String name, int weight, double price) {
         this.name = name;
         this.weight = weight;
         this.price = price;
-        this.param = param;
+
     }
 
     public String getName() {
@@ -28,9 +28,7 @@ public abstract class Candy {
     }
 
 
-    public String getParam() {
-        return param;
-    }
+
 
 
     public String getInfo() {
@@ -38,7 +36,6 @@ public abstract class Candy {
                 "name='" + name + '\'' +
                 ", weight=" + weight +
                 ", price=" + price +
-                ", param='" + param + '\'' +
                 '}';
     }
 

@@ -6,13 +6,11 @@ import org.example.Gift.Box;
 import org.example.Gift.Cake;
 import org.example.Gift.Chocolate;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static org.example.InputPathFile.inputPathFile;
+import static org.example.Print.print;
 import static org.example.ReadFile.*;
 
 public class Main {
@@ -26,15 +24,21 @@ public class Main {
                 .map(chars -> chars.toLowerCase())
                 .sorted()
                 .toList();
-        System.out.println("В алфавитном порядке " + lowerCaseStr);
-        Map<String, Long> wordFrequency = lowerCaseStr.stream()
+        System.out.println("В алфавитном порядке ");
+        print(lowerCaseStr);
+        Map<String, Double> wordFrequency = lowerCaseStr.stream()
                 .collect(Collectors.groupingBy(
                         word -> word,
-                        Collectors.counting()
-                ));
-        System.out.println("Статистика " + wordFrequency);
+                        Collectors.collectingAndThen(
+                                Collectors.counting(),
+                                count -> (double) count * 100 / lowerCaseStr.size()
+                )));
+        System.out.println("Статистика ");
+        wordFrequency.entrySet().stream()
+                .sorted(Map.Entry.<String, Double>comparingByValue())
+                .forEach(entry -> System.out.println(entry.getKey() + " : " + entry.getValue().floatValue() + "%"));
         List result = wordFrequency.entrySet().stream()
-                .filter(value -> value.getValue() == Collections.max(wordFrequency.values()))
+                .filter(value -> Objects.equals(value.getValue(), Collections.max(wordFrequency.values())))
                 .toList();
         System.out.println("Слово " + result);
 

@@ -38,6 +38,7 @@ public class Programmer {
 
     public void goSleep() {
         System.out.println(this.name + " идет спать.");
+        this.tiredness -= 1;
     };
 
     public void teachJava(Programmer anotherProgrammer) {

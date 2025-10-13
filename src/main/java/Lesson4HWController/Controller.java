@@ -102,13 +102,11 @@ public class Controller {
     @GetMapping("/sort-array")
     public String sortArray(@RequestParam("numbers") List<Integer> numbers, @RequestParam("isAsc") boolean isAsc){
         try {
-            List<Integer> ascArray = numbers.stream()
+            return (isAsc) ? numbers.stream()
                     .sorted(Comparator.naturalOrder())
-                    .toList();
-            List<Integer> descArray = numbers.stream()
+                    .toList().toString() : numbers.stream()
                     .sorted(Comparator.reverseOrder())
-                    .toList();
-            return (isAsc) ? ascArray.toString() : descArray.toString();
+                    .toList().toString();
         } catch (Exception e) {
             return "Ошибка в sortArray: " + e.getMessage();
         }

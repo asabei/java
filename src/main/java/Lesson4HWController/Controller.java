@@ -119,7 +119,7 @@ public class Controller {
             StringBuilder stringBuilder = new StringBuilder(str);
             return (isFirst) ? stringBuilder.substring(0, pos) : stringBuilder.substring(pos);
         } catch (Exception e) {
-            return "Ошибка в subString: " + e.getMessage();
+            return "Ошибка в subStrin: " + e.getMessage();
         }
     }
 

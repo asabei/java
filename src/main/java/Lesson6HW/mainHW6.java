@@ -14,14 +14,31 @@ public class mainHW6 {
         Optional<Map.Entry<String, Double>> maxEntry = avgGr.entrySet()
                 .stream()
                 .max(Map.Entry.comparingByValue());
-        System.out.println("лучший студент " + maxEntry);
+
+        List avgGr1 = filetxt.stream()
+                .collect(Collectors.groupingBy(Person::getFamily, Collectors.averagingDouble(Person::getRes)))
+                .entrySet()
+                .stream()
+                .filter(entry -> entry.getValue() >= maxEntry.get().getValue())
+                .toList();
+
+        System.out.println("лучший студент " + avgGr1);
 
         Map avgLes = filetxt.stream()
                 .collect(Collectors.groupingBy(Person::getLesson, Collectors.averagingDouble(Person::getRes)));
+
         Optional<Map.Entry<String, Double>> minEntry = avgLes.entrySet()
                 .stream()
                 .min(Map.Entry.comparingByValue());
-        System.out.println("самый сложный предмет " + minEntry);
+
+        List avgLes1 = filetxt.stream()
+                .collect(Collectors.groupingBy(Person::getLesson, Collectors.averagingDouble(Person::getRes)))
+                .entrySet()
+                .stream()
+                .filter(entry -> entry.getValue() <= minEntry.get().getValue())
+                .toList();
+
+        System.out.println("самый сложный предмет " + avgLes1);
 
         List distLes = filetxt.stream()
                 .map(les -> les.getLesson())

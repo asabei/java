@@ -6,7 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class main7HW {
     public static void main(String[] args) {
-        System.out.println(CharFr.countChar("sfsf sewtwt"));
+        //LogerService.writeLog("Событие", "wedddddd");
+        System.out.println(LogerService.readLog());
         SpringApplication.run(main7HW.class, args);
     }
 }

@@ -1,0 +1,6 @@
+2025-11-08 17:15:44: DROP TABLE IF EXISTS students
+2025-11-08 17:15:44: CREATE TABLE students
+2025-11-08 17:15:44: INSERT INTO students
+2025-11-08 17:16:58: SELECT * FROM students WHERE student_id = ? with student_id=1
+2025-11-08 17:19:30: SELECT * FROM students WHERE group_name = ? ORDER BY last_name with groupName=CS-21
+2025-11-08 17:21:46: UPDATE students SET first_name = ?, group_name = ? WHERE student_id = ? with student_id=2, firstName=Masha, groupName=CS-22

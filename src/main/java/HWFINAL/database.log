@@ -1,0 +1,3 @@
+2025-11-16 15:20:29: Sent message to Kafka
+2025-11-16 15:20:29: DataTime: 2025-11-16 15:20:29 /urlRequest: /getAllUsers: {get all users request}
+2025-11-16 15:20:29: Получено информационное событие (без изменения БД)

@@ -1,38 +1,101 @@
+2025-11-22T10:30:40.935+07:00  INFO 66467 --- [unified-service] [main] HWFINAL.App                              : Starting App using Java 17.0.15 with PID 66467 (/Users/aleksandrzabejvorota/Documents/javalessons/JavaLessons/target/classes started by aleksandrzabejvorota in /Users/aleksandrzabejvorota/Documents/javalessons/JavaLessons)
+2025-11-22T10:30:40.938+07:00  INFO 66467 --- [unified-service] [main] HWFINAL.App                              : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T10:30:41.376+07:00  INFO 66467 --- [unified-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-11-22T10:30:41.382+07:00  INFO 66467 --- [unified-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-22T10:30:41.382+07:00  INFO 66467 --- [unified-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-22T10:30:41.398+07:00  INFO 66467 --- [unified-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-22T10:30:41.399+07:00  INFO 66467 --- [unified-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 443 ms
+2025-11-22T10:30:41.482+07:00  INFO 66467 --- [unified-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T10:30:41.542+07:00  INFO 66467 --- [unified-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@63fd4dda
+2025-11-22T10:30:41.542+07:00  INFO 66467 --- [unified-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T10:30:41.556+07:00  WARN 66467 --- [unified-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'kafkaConsumer': Invocation of init method failed
+2025-11-22T10:30:41.557+07:00  INFO 66467 --- [unified-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-22T10:30:41.558+07:00  INFO 66467 --- [unified-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-22T10:30:41.559+07:00  INFO 66467 --- [unified-service] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-11-22T10:30:41.566+07:00  INFO 66467 --- [unified-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
 
-2025-11-16T14:47:45.009+07:00  INFO 38448 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-group-1, groupId=group] Revoke previously assigned partitions finalProject-0
-2025-11-16T14:47:45.010+07:00  INFO 38448 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group: partitions revoked: [finalProject-0]
-2025-11-16T14:47:45.010+07:00  INFO 38448 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1, groupId=group] Member consumer-group-1-66a5bcd5-61fd-49ba-a792-2bdb3766bfde sending LeaveGroup request to coordinator localhost:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
-2025-11-16T14:47:45.010+07:00  INFO 38448 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1, groupId=group] Resetting generation and member id due to: consumer pro-actively leaving the group
-2025-11-16T14:47:45.010+07:00  INFO 38448 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1, groupId=group] Request joining group due to: consumer pro-actively leaving the group
-2025-11-16T14:47:45.010+07:00  INFO 38448 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-group-1, groupId=group] Unsubscribed all topics or patterns and assigned partitions
-2025-11-16T14:47:45.011+07:00  INFO 38448 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1, groupId=group] Resetting generation and member id due to: consumer pro-actively leaving the group
-2025-11-16T14:47:45.011+07:00  INFO 38448 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1, groupId=group] Request joining group due to: consumer pro-actively leaving the group
-2025-11-16T14:47:45.406+07:00  INFO 38448 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
-2025-11-16T14:47:45.406+07:00  INFO 38448 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2025-11-16T14:47:45.407+07:00  INFO 38448 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
-2025-11-16T14:47:45.407+07:00  INFO 38448 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
-2025-11-16T14:47:45.413+07:00  INFO 38448 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-group-1 unregistered
-2025-11-16T14:47:45.417+07:00  INFO 38448 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group: Consumer stopped
-2025-11-16T14:47:45.420+07:00  INFO 38448 --- [unified-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-11-16T14:47:45.428+07:00  INFO 38448 --- [unified-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-11-16T14:47:45.430+07:00  INFO 38448 --- [unified-service] [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=unified-service-producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
-2025-11-16T14:47:45.433+07:00  INFO 38448 --- [unified-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
-2025-11-16T14:47:45.434+07:00  INFO 38448 --- [unified-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2025-11-16T14:47:45.434+07:00  INFO 38448 --- [unified-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
-2025-11-16T14:47:45.434+07:00  INFO 38448 --- [unified-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
-2025-11-16T14:47:45.434+07:00  INFO 38448 --- [unified-service] [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for unified-service-producer-1 unregistered
-2025-11-16T14:47:45.438+07:00  INFO 38448 --- [unified-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-11-16T14:47:45.439+07:00  INFO 38448 --- [unified-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-11-16T15:19:55.297+07:00  INFO 40612 --- [unified-service] [main] HWFINAL.App                              : Starting App using Java 17.0.15 with PID 40612 (/Users/aleksandrzabejvorota/Documents/javalessons/JavaLessons/target/classes started by aleksandrzabejvorota in /Users/aleksandrzabejvorota/Documents/javalessons/JavaLessons)
-2025-11-16T15:19:55.299+07:00  INFO 40612 --- [unified-service] [main] HWFINAL.App                              : No active profile set, falling back to 1 default profile: "default"
-2025-11-16T15:19:55.713+07:00  INFO 40612 --- [unified-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2025-11-16T15:19:55.718+07:00  INFO 40612 --- [unified-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-11-16T15:19:55.718+07:00  INFO 40612 --- [unified-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
-2025-11-16T15:19:55.735+07:00  INFO 40612 --- [unified-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-11-16T15:19:55.735+07:00  INFO 40612 --- [unified-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 412 ms
-2025-11-16T15:19:55.970+07:00  INFO 40612 --- [unified-service] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2025-11-16T15:19:56.001+07:00  INFO 40612 --- [unified-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
-2025-11-16T15:19:56.013+07:00  INFO 40612 --- [unified-service] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-22T10:30:41.571+07:00 ERROR 66467 --- [unified-service] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'kafkaConsumer': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:429) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1818) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1228) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1194) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:990) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.7.jar:3.5.7]
+	at HWFINAL.App.main(App.java:10) ~[classes/:na]
+Caused by: org.springframework.dao.DuplicateKeyException: StatementCallback; SQL [INSERT INTO Users (FirstName, LastName, birthDay, DepartmentId) VALUES 
+('John', 'Doe', '1990-01-15', 1),
+('Jane', 'Smith', '1985-03-20', 2),
+('Mike', 'Johnson', '1992-07-10', 1),
+('Sarah', 'Williams', '1988-11-05', 3),
+('Tom', 'Brown', '1991-02-28', 1),
+('Emma', 'Davis', '1987-09-12', 2),
+('Chris', 'Miller', '1993-04-18', 1),
+('Lisa', 'Wilson', '1989-06-25', 4),
+('David', 'Taylor', '1990-12-08', 1),
+('Anna', 'Anderson', '1986-08-14', 5);]; ERROR: duplicate key value violates unique constraint "unique_first_last_name"
+  Подробности: Key (firstname, lastname)=(John, Doe) already exists.
+	at org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:138) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:107) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:116) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1556) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:408) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:444) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at HWFINAL.SERVICE.KafkaConsumer.initDb(KafkaConsumer.java:80) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219) ~[spring-beans-6.2.12.jar:6.2.12]
+	... 20 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unique_first_last_name"
+  Подробности: Key (firstname, lastname)=(John, Doe) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2421) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:525) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:357) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:342) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:318) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:313) ~[postgresql-42.7.8.jar:42.7.8]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-6.3.3.jar:na]
+	at org.springframework.jdbc.core.JdbcTemplate$1ExecuteStatementCallback.doInStatement(JdbcTemplate.java:435) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:393) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	... 29 common frames omitted
+
+2025-11-22T10:33:41.238+07:00  INFO 66559 --- [unified-service] [main] HWFINAL.App                              : Starting App using Java 17.0.15 with PID 66559 (/Users/aleksandrzabejvorota/Documents/javalessons/JavaLessons/target/classes started by aleksandrzabejvorota in /Users/aleksandrzabejvorota/Documents/javalessons/JavaLessons)
+2025-11-22T10:33:41.240+07:00  INFO 66559 --- [unified-service] [main] HWFINAL.App                              : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T10:33:41.666+07:00  INFO 66559 --- [unified-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-11-22T10:33:41.670+07:00  INFO 66559 --- [unified-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-22T10:33:41.671+07:00  INFO 66559 --- [unified-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-22T10:33:41.687+07:00  INFO 66559 --- [unified-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-22T10:33:41.688+07:00  INFO 66559 --- [unified-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 421 ms
+2025-11-22T10:33:41.764+07:00  INFO 66559 --- [unified-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T10:33:41.819+07:00  INFO 66559 --- [unified-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@36c7cbe1
+2025-11-22T10:33:41.820+07:00  INFO 66559 --- [unified-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T10:33:42.020+07:00  INFO 66559 --- [unified-service] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-11-22T10:33:42.054+07:00  INFO 66559 --- [unified-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-11-22T10:33:42.067+07:00  INFO 66559 --- [unified-service] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -132,150 +195,39 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
 
-2025-11-16T15:19:56.025+07:00  INFO 40612 --- [unified-service] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
-2025-11-16T15:19:56.057+07:00  INFO 40612 --- [unified-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
-2025-11-16T15:19:56.058+07:00  INFO 40612 --- [unified-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
-2025-11-16T15:19:56.058+07:00  INFO 40612 --- [unified-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1763281196057
-2025-11-16T15:19:56.062+07:00  INFO 40612 --- [unified-service] [main] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-group-1, groupId=group] Subscribed to topic(s): finalProject
-2025-11-16T15:19:56.071+07:00  INFO 40612 --- [unified-service] [main] HWFINAL.App                              : Started App in 0.98 seconds (process running for 1.114)
-2025-11-16T15:19:56.153+07:00  INFO 40612 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-group-1, groupId=group] Cluster ID: sVkz_YjxRkS-FiPKUb47IQ
-2025-11-16T15:19:56.154+07:00  INFO 40612 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1, groupId=group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
-2025-11-16T15:19:56.155+07:00  INFO 40612 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1, groupId=group] (Re-)joining group
-2025-11-16T15:19:56.162+07:00  INFO 40612 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1, groupId=group] Request joining group due to: need to re-join with the given member-id: consumer-group-1-7a830c24-3fa2-4b7c-a681-82928849b1f4
-2025-11-16T15:19:56.163+07:00  INFO 40612 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1, groupId=group] (Re-)joining group
-2025-11-16T15:19:59.169+07:00  INFO 40612 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1, groupId=group] Successfully joined group with generation Generation{generationId=3, memberId='consumer-group-1-7a830c24-3fa2-4b7c-a681-82928849b1f4', protocol='range'}
-2025-11-16T15:19:59.179+07:00  INFO 40612 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1, groupId=group] Finished assignment for group at generation 3: {consumer-group-1-7a830c24-3fa2-4b7c-a681-82928849b1f4=Assignment(partitions=[finalProject-0])}
-2025-11-16T15:19:59.191+07:00  INFO 40612 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1, groupId=group] Successfully synced group in generation Generation{generationId=3, memberId='consumer-group-1-7a830c24-3fa2-4b7c-a681-82928849b1f4', protocol='range'}
-2025-11-16T15:19:59.192+07:00  INFO 40612 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1, groupId=group] Notifying assignor about the new Assignment(partitions=[finalProject-0])
-2025-11-16T15:19:59.194+07:00  INFO 40612 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-group-1, groupId=group] Adding newly assigned partitions: finalProject-0
-2025-11-16T15:19:59.208+07:00  INFO 40612 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition finalProject-0 to the committed offset FetchPosition{offset=2, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
-2025-11-16T15:19:59.209+07:00  INFO 40612 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group: partitions assigned: [finalProject-0]
-2025-11-16T15:20:29.416+07:00  INFO 40612 --- [unified-service] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-11-16T15:20:29.417+07:00  INFO 40612 --- [unified-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-11-16T15:20:29.418+07:00  INFO 40612 --- [unified-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-11-16T15:20:29.436+07:00  INFO 40612 --- [unified-service] [http-nio-8081-exec-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
-	acks = -1
-	auto.include.jmx.reporter = true
-	batch.size = 16384
-	bootstrap.servers = [localhost:9092]
-	buffer.memory = 33554432
-	client.dns.lookup = use_all_dns_ips
-	client.id = unified-service-producer-1
-	compression.gzip.level = -1
-	compression.lz4.level = 9
-	compression.type = none
-	compression.zstd.level = 3
-	connections.max.idle.ms = 540000
-	delivery.timeout.ms = 120000
-	enable.idempotence = true
-	enable.metrics.push = true
-	interceptor.classes = []
-	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
-	linger.ms = 0
-	max.block.ms = 60000
-	max.in.flight.requests.per.connection = 5
-	max.request.size = 1048576
-	metadata.max.age.ms = 300000
-	metadata.max.idle.ms = 300000
-	metadata.recovery.strategy = none
-	metric.reporters = []
-	metrics.num.samples = 2
-	metrics.recording.level = INFO
-	metrics.sample.window.ms = 30000
-	partitioner.adaptive.partitioning.enable = true
-	partitioner.availability.timeout.ms = 0
-	partitioner.class = null
-	partitioner.ignore.keys = false
-	receive.buffer.bytes = 32768
-	reconnect.backoff.max.ms = 1000
-	reconnect.backoff.ms = 50
-	request.timeout.ms = 30000
-	retries = 2147483647
-	retry.backoff.max.ms = 1000
-	retry.backoff.ms = 100
-	sasl.client.callback.handler.class = null
-	sasl.jaas.config = null
-	sasl.kerberos.kinit.cmd = /usr/bin/kinit
-	sasl.kerberos.min.time.before.relogin = 60000
-	sasl.kerberos.service.name = null
-	sasl.kerberos.ticket.renew.jitter = 0.05
-	sasl.kerberos.ticket.renew.window.factor = 0.8
-	sasl.login.callback.handler.class = null
-	sasl.login.class = null
-	sasl.login.connect.timeout.ms = null
-	sasl.login.read.timeout.ms = null
-	sasl.login.refresh.buffer.seconds = 300
-	sasl.login.refresh.min.period.seconds = 60
-	sasl.login.refresh.window.factor = 0.8
-	sasl.login.refresh.window.jitter = 0.05
-	sasl.login.retry.backoff.max.ms = 10000
-	sasl.login.retry.backoff.ms = 100
-	sasl.mechanism = GSSAPI
-	sasl.oauthbearer.clock.skew.seconds = 30
-	sasl.oauthbearer.expected.audience = null
-	sasl.oauthbearer.expected.issuer = null
-	sasl.oauthbearer.header.urlencode = false
-	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
-	sasl.oauthbearer.jwks.endpoint.url = null
-	sasl.oauthbearer.scope.claim.name = scope
-	sasl.oauthbearer.sub.claim.name = sub
-	sasl.oauthbearer.token.endpoint.url = null
-	security.protocol = PLAINTEXT
-	security.providers = null
-	send.buffer.bytes = 131072
-	socket.connection.setup.timeout.max.ms = 30000
-	socket.connection.setup.timeout.ms = 10000
-	ssl.cipher.suites = null
-	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
-	ssl.endpoint.identification.algorithm = https
-	ssl.engine.factory.class = null
-	ssl.key.password = null
-	ssl.keymanager.algorithm = SunX509
-	ssl.keystore.certificate.chain = null
-	ssl.keystore.key = null
-	ssl.keystore.location = null
-	ssl.keystore.password = null
-	ssl.keystore.type = JKS
-	ssl.protocol = TLSv1.3
-	ssl.provider = null
-	ssl.secure.random.implementation = null
-	ssl.trustmanager.algorithm = PKIX
-	ssl.truststore.certificates = null
-	ssl.truststore.location = null
-	ssl.truststore.password = null
-	ssl.truststore.type = JKS
-	transaction.timeout.ms = 60000
-	transactional.id = null
-	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
-
-2025-11-16T15:20:29.437+07:00  INFO 40612 --- [unified-service] [http-nio-8081-exec-1] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
-2025-11-16T15:20:29.440+07:00  INFO 40612 --- [unified-service] [http-nio-8081-exec-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=unified-service-producer-1] Instantiated an idempotent producer.
-2025-11-16T15:20:29.446+07:00  INFO 40612 --- [unified-service] [http-nio-8081-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
-2025-11-16T15:20:29.446+07:00  INFO 40612 --- [unified-service] [http-nio-8081-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
-2025-11-16T15:20:29.446+07:00  INFO 40612 --- [unified-service] [http-nio-8081-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1763281229446
-2025-11-16T15:20:29.451+07:00  INFO 40612 --- [unified-service] [kafka-producer-network-thread | unified-service-producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=unified-service-producer-1] Cluster ID: sVkz_YjxRkS-FiPKUb47IQ
-2025-11-16T15:20:29.452+07:00  INFO 40612 --- [unified-service] [kafka-producer-network-thread | unified-service-producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=unified-service-producer-1] ProducerId set to 1 with epoch 0
-2025-11-16T15:23:01.654+07:00  INFO 40612 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-group-1, groupId=group] Revoke previously assigned partitions finalProject-0
-2025-11-16T15:23:01.655+07:00  INFO 40612 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group: partitions revoked: [finalProject-0]
-2025-11-16T15:23:01.656+07:00  INFO 40612 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1, groupId=group] Member consumer-group-1-7a830c24-3fa2-4b7c-a681-82928849b1f4 sending LeaveGroup request to coordinator localhost:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
-2025-11-16T15:23:01.656+07:00  INFO 40612 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1, groupId=group] Resetting generation and member id due to: consumer pro-actively leaving the group
-2025-11-16T15:23:01.656+07:00  INFO 40612 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1, groupId=group] Request joining group due to: consumer pro-actively leaving the group
-2025-11-16T15:23:01.656+07:00  INFO 40612 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-group-1, groupId=group] Unsubscribed all topics or patterns and assigned partitions
-2025-11-16T15:23:01.657+07:00  INFO 40612 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1, groupId=group] Resetting generation and member id due to: consumer pro-actively leaving the group
-2025-11-16T15:23:01.657+07:00  INFO 40612 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1, groupId=group] Request joining group due to: consumer pro-actively leaving the group
-2025-11-16T15:23:01.978+07:00  INFO 40612 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
-2025-11-16T15:23:01.978+07:00  INFO 40612 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2025-11-16T15:23:01.979+07:00  INFO 40612 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
-2025-11-16T15:23:01.979+07:00  INFO 40612 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
-2025-11-16T15:23:01.983+07:00  INFO 40612 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-group-1 unregistered
-2025-11-16T15:23:01.984+07:00  INFO 40612 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group: Consumer stopped
-2025-11-16T15:23:01.985+07:00  INFO 40612 --- [unified-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-11-16T15:23:01.990+07:00  INFO 40612 --- [unified-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-11-16T15:23:01.991+07:00  INFO 40612 --- [unified-service] [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=unified-service-producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
-2025-11-16T15:23:01.993+07:00  INFO 40612 --- [unified-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
-2025-11-16T15:23:01.993+07:00  INFO 40612 --- [unified-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2025-11-16T15:23:01.993+07:00  INFO 40612 --- [unified-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
-2025-11-16T15:23:01.993+07:00  INFO 40612 --- [unified-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
-2025-11-16T15:23:01.994+07:00  INFO 40612 --- [unified-service] [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for unified-service-producer-1 unregistered
+2025-11-22T10:33:42.084+07:00  INFO 66559 --- [unified-service] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-11-22T10:33:42.125+07:00  INFO 66559 --- [unified-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-11-22T10:33:42.125+07:00  INFO 66559 --- [unified-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-11-22T10:33:42.125+07:00  INFO 66559 --- [unified-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1763782422124
+2025-11-22T10:33:42.129+07:00  INFO 66559 --- [unified-service] [main] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-group-1, groupId=group] Subscribed to topic(s): finalProject
+2025-11-22T10:33:42.138+07:00  INFO 66559 --- [unified-service] [main] HWFINAL.App                              : Started App in 1.081 seconds (process running for 1.206)
+2025-11-22T10:33:42.257+07:00  INFO 66559 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-group-1, groupId=group] Cluster ID: sVkz_YjxRkS-FiPKUb47IQ
+2025-11-22T10:33:42.258+07:00  INFO 66559 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1, groupId=group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-11-22T10:33:42.259+07:00  INFO 66559 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1, groupId=group] (Re-)joining group
+2025-11-22T10:33:42.271+07:00  INFO 66559 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1, groupId=group] Request joining group due to: need to re-join with the given member-id: consumer-group-1-ce431f20-8aba-45c4-bbd4-1c9066773629
+2025-11-22T10:33:42.271+07:00  INFO 66559 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1, groupId=group] (Re-)joining group
+2025-11-22T10:33:45.283+07:00  INFO 66559 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1, groupId=group] Successfully joined group with generation Generation{generationId=5, memberId='consumer-group-1-ce431f20-8aba-45c4-bbd4-1c9066773629', protocol='range'}
+2025-11-22T10:33:45.289+07:00  INFO 66559 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1, groupId=group] Finished assignment for group at generation 5: {consumer-group-1-ce431f20-8aba-45c4-bbd4-1c9066773629=Assignment(partitions=[finalProject-0])}
+2025-11-22T10:33:45.315+07:00  INFO 66559 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1, groupId=group] Successfully synced group in generation Generation{generationId=5, memberId='consumer-group-1-ce431f20-8aba-45c4-bbd4-1c9066773629', protocol='range'}
+2025-11-22T10:33:45.315+07:00  INFO 66559 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1, groupId=group] Notifying assignor about the new Assignment(partitions=[finalProject-0])
+2025-11-22T10:33:45.316+07:00  INFO 66559 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-group-1, groupId=group] Adding newly assigned partitions: finalProject-0
+2025-11-22T10:33:45.322+07:00  INFO 66559 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition finalProject-0 to the committed offset FetchPosition{offset=3, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2025-11-22T10:33:45.323+07:00  INFO 66559 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group: partitions assigned: [finalProject-0]
+2025-11-22T10:34:02.922+07:00  INFO 66559 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-group-1, groupId=group] Revoke previously assigned partitions finalProject-0
+2025-11-22T10:34:02.923+07:00  INFO 66559 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group: partitions revoked: [finalProject-0]
+2025-11-22T10:34:02.923+07:00  INFO 66559 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1, groupId=group] Member consumer-group-1-ce431f20-8aba-45c4-bbd4-1c9066773629 sending LeaveGroup request to coordinator localhost:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2025-11-22T10:34:02.924+07:00  INFO 66559 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1, groupId=group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-11-22T10:34:02.924+07:00  INFO 66559 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1, groupId=group] Request joining group due to: consumer pro-actively leaving the group
+2025-11-22T10:34:02.924+07:00  INFO 66559 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-group-1, groupId=group] Unsubscribed all topics or patterns and assigned partitions
+2025-11-22T10:34:02.925+07:00  INFO 66559 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1, groupId=group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-11-22T10:34:02.925+07:00  INFO 66559 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1, groupId=group] Request joining group due to: consumer pro-actively leaving the group
+2025-11-22T10:34:03.120+07:00  INFO 66559 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2025-11-22T10:34:03.120+07:00  INFO 66559 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-11-22T10:34:03.121+07:00  INFO 66559 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-11-22T10:34:03.121+07:00  INFO 66559 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2025-11-22T10:34:03.131+07:00  INFO 66559 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-group-1 unregistered
+2025-11-22T10:34:03.134+07:00  INFO 66559 --- [unified-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group: Consumer stopped
+2025-11-22T10:34:03.137+07:00  INFO 66559 --- [unified-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-22T10:34:03.143+07:00  INFO 66559 --- [unified-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-22T10:34:03.147+07:00  INFO 66559 --- [unified-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-22T10:34:03.151+07:00  INFO 66559 --- [unified-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
